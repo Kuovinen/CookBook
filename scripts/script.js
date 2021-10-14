@@ -21,7 +21,7 @@ const rList={
 
 //assign variablename to HTML buttons
 const themeButton = document.querySelector(".theme_btn");
-const soupsButton = document.querySelector(".soupsL");
+const soupsButton = document.querySelector(".finnishS");
 const bakedButton = document.querySelector(".stirF");
 //logic triggers:
 var dark=false;
