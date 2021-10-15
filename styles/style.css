@@ -143,6 +143,15 @@ h1{
 	/*background-color: yellow;*/
 
 }
+.tutu{
+	color:red;
+}
+/*Image*/
+.dishIllustration{
+	display:block;
+	height:100px;
+	width:200px;
+}
 /*MAIN BODY*/
 .recipe{
 	background-color:rgb(255,255,255,0.60);
