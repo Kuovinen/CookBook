@@ -10,9 +10,7 @@
 	transition: all 0.5s;
 	background-color:var(--light-color);
 }
-.top_section{
-	/*background-color:red;*/
-}
+
 h1{
 	text-align : center;
 	font-size:3.5em;
@@ -143,14 +141,11 @@ h1{
 	/*background-color: yellow;*/
 
 }
-.tutu{
-	color:red;
-}
+
 /*Image*/
 .dishIllustration{
-	display:block;
-	height:100px;
-	width:200px;
+	height:297px;
+	width: 210px;
 }
 /*MAIN BODY*/
 .recipe{
@@ -159,6 +154,14 @@ h1{
 	margin-left: 50px;
 	margin-right: 50px;
 }
+.tableContainerDiv{
+	vertical-align: top;
+	position:relative;
+	left:20px;
+}
+
+
+
 /*FOOTER*/
 #srch{
 	position:absolute;
@@ -180,8 +183,4 @@ h1{
   color:var(--dark-color);
   background-color:var(--light-color);
 
-}
-
-.table{
-	/*float:right;*/
 }

@@ -6,7 +6,8 @@ const rList={
 				[1, " ", "Onion", 44],
 				[1000, "grams", "Potatoes", 770]
 			],
-			"Chop up, throw in pot, boil."],
+			"Chop up, throw in pot, boil.",
+			"images/dish1img.svg"],
 "stirFry":["STIR FRY",
 			[
 				[2, "pcs","Bellpeppers",0],
@@ -16,7 +17,9 @@ const rList={
 				[0.5,"glass","Soy sauce",0],
 				[1,"tbl s","Sesane oil",0]
 			],
-			"Chop up, throw in pan, fry. Don't let it burn."]
+			"Chop up, throw in pan, fry. Don't let it burn.",
+			"images/dish2img.svg"
+		]
 }
 
 //assign variablename to HTML buttons
@@ -68,16 +71,32 @@ function createRecipe(recipe,name){
     }
     //Set up title of recipe
     let recipeHeader = createDiv();//div for recipe title
+	recipeHeader.className = "recipeHeader";
 	recipeHeader.style.fontSize="2em";
+	recipeHeader.style.display="block";
     recipeHeader.innerHTML ="<b>"+rList[dishName][0]+"</b>";
     document.getElementsByClassName("recipe")[0].appendChild(recipeHeader);
     let br = document.createElement("br");
     document.getElementsByClassName("recipe")[0].appendChild(br);
 
+	let ingredientsDiv = createDiv(); //div to put both image and ingridiets list into for styling
+	ingredientsDiv.className = "ingredientsDiv";
+	document.getElementsByClassName("recipe")[0].appendChild(ingredientsDiv);
+	//create the dish illustration
+	let illustration = document.createElement("img");
+	illustration.className="dishIllustration";
+	illustration.src=rList[dishName][3];
+	illustration.alt="RECIPE_ILLUSTRATION";
+	document.getElementsByClassName("ingredientsDiv")[0].appendChild(illustration);
     //set up recipe
+
+	let ingredientsTxt=createDiv();		// a div to put the ingridients table into for styling
+	ingredientsTxt.className="tableContainerDiv";
+	document.getElementsByClassName("ingredientsDiv")[0].appendChild(ingredientsTxt);
+
 	let ingredients = createTable();
 	ingredients.className = "table";
-	document.getElementsByClassName("recipe")[0].appendChild(ingredients);
+	document.getElementsByClassName("tableContainerDiv")[0].appendChild(ingredients);
     for(let i = 0; i<rList[dishName][1].length; i++){
 	  let row = createTr();
 	  row.className = "row"+i;
