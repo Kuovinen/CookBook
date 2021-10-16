@@ -73,7 +73,6 @@ h1{
 }
 
 .menuB1:hover,.menuB2:hover,.menuB3:hover,.menuB4:hover {
-  vertical-align: middle;
   color: white;
   background-color:var(--light-colora);
   border: 0px;
@@ -101,7 +100,7 @@ h1{
 }
 .dropdown-content{
 	display:none;
-	width:120px;
+	width:170px;
 	position:absolute;
 	font-size:2em;
 	z-index:1;
@@ -111,7 +110,7 @@ h1{
 	background-color:var(--dark-color);
 	display:block;
 }
-.dropdown-content a:hover { background-color:var(--dark-colora); }
+.dropdown-content a:hover { background-color:var(--light-color); }
 .dropdownS:hover .dropdown-content{
 	display:block;
 }
