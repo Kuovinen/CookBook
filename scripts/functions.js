@@ -1,3 +1,4 @@
+//MINOR UTILITERY FUNCTIONS-----------------------------------------------------
 //div element function
 export function createDiv(className, display) {
   let div = document.createElement("div");
@@ -28,8 +29,8 @@ function setIllustration(dishName, list) {
 //Cooking process text for recipe div
 function setMethod(dishName, list) {
   //Set up process text
-  let cookingMethod = createDiv("method", "inline-block");
-  cookingMethod.innerHTML = "<b>" + list[dishName][2] + "</b>";
+  let cookingMethod = createElement("p", "block");
+  cookingMethod.textContent = list[dishName][2];
   return cookingMethod;
 }
 //Ingridients table for recipe div
@@ -42,11 +43,12 @@ function createIngTable(dishName, list) {
     ingredients.appendChild(row);
     for (let j = 0; j < list[dishName][1][i].length; j++) {
       let lineTxt = createElement("td", "td"); //cell to hold each new lines text
-      lineTxt.innerHTML = "<b>" + list[dishName][1][i][j] + "</b>"; //cell content
+      lineTxt.textContent = list[dishName][1][i][j]; //cell content
       ingredients.childNodes[i].appendChild(lineTxt);
     }
   }
   ingredientsTxt.appendChild(ingredients);
+
   return ingredientsTxt;
 }
 //MAIN FUNCTION--------------------------------------------------------------------
@@ -78,4 +80,31 @@ export default function createRecipe(recipe, dishName, list) {
   //next time it'll triger the cleanup done by the top section of this function
 
   return true; //set that the recepy is now present on the page
+}
+
+//MENU FUNCTION--------------------------------------------------------------------
+
+export function makeMenuSection(
+  className,
+  buttonClass,
+  theme,
+  dishes,
+  recipeStatus
+) {
+  //select the button container
+  let node = document.querySelector("." + className);
+  //make the button and add it's theme text
+  node.appendChild(createElement("button", buttonClass));
+  node.appendChild(createElement("div", "dropdown-content"));
+  node.childNodes[0].innerHTML = theme;
+  //fill it with <a> elements that each have a class and text
+  let keys = Object.keys(dishes);
+  keys.map((key) => {
+    let a = createElement("a", key);
+    a.textContent = dishes[key][0];
+    a.onclick = function () {
+      recipeStatus = createRecipe(recipeStatus, key, dishes);
+    };
+    node.childNodes[1].appendChild(a);
+  });
 }
