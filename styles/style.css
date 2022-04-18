@@ -95,7 +95,6 @@ h1 {
 .dropdownO,
 .dropdownM {
   display: block;
-  height: var(--elHeight);
 }
 
 .dropdown-content {
