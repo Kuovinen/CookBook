@@ -1,42 +1,15 @@
 const list = {
-  stirFry: [
-    "STIR FRY",
+  applePie: [
+    "APPLE PIE",
     [
-      [2, "pcs", "Bellpeppers", 0],
-      [400, "frams", "Chicken Filtet", 0],
-      [2, "tbl s", "Vinegra", 0],
-      [1, "clove", "garlic", 0],
-      [0.5, "glass", "Soy sauce", 0],
-      [1, "tbl s", "Sesane oil", 0],
+      [3, " ", "Apples", 0],
+      [3, " ", "Eggs", 0],
+      [1, "glass", "Flour", 0],
+      [1, "glass", "Sugar", 0],
+      [4, "tblspn", "crumbs", 0],
     ],
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "images/dish2img.svg",
-  ],
-  stirFry3: [
-    "STIR FRY3",
-    [
-      [2, "pcs", "Bellpeppers", 0],
-      [400, "frams", "Chicken Filtet", 0],
-      [2, "tbl s", "Vinegra", 0],
-      [1, "clove", "garlic", 0],
-      [0.5, "glass", "Soy sauce", 0],
-      [1, "tbl s", "Sesane oil", 0],
-    ],
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "images/dish2img.svg",
-  ],
-  stirFry4: [
-    "STIR FRY4",
-    [
-      [2, "pcs", "Bellpeppers", 0],
-      [400, "frams", "Chicken Filtet", 0],
-      [2, "tbl s", "Vinegra", 0],
-      [1, "clove", "garlic", 0],
-      [0.5, "glass", "Soy sauce", 0],
-      [1, "tbl s", "Sesane oil", 0],
-    ],
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "images/dish2img.svg",
+    "Add the sugar to the eggs and beat them with a mixer for 15 minutes. Add and mix in the flour into the resulting mix. Cut the apples into small triangles having removed their peel. Cover the form with butter and then crumbs. Lay the apples onto the bottom and pour the mix ontop. Put the pie into the oven for 45 minutes at 200C.",
+    "images/apPie.jpg",
   ],
 };
 export default list;
