@@ -18,6 +18,7 @@ body {
 h1 {
   text-align: center;
   font-size: 3.5rem;
+  user-select: none;
 }
 .theme_btn {
   position: absolute;
@@ -49,13 +50,10 @@ h1 {
   display: grid;
   grid-template-columns: repeat(5, minmax(8rem, 20%));
   align-items: center;
+  justify-content: center;
 }
-
-.menuText {
-  font-size: 2rem;
-  font-weight: 700;
+.dropdownM {
   grid-column: 1;
-  user-select: none;
 }
 .dropdownS {
   grid-column: 2;
@@ -66,9 +64,10 @@ h1 {
 .dropdownF {
   grid-column: 4;
 }
-.dropdownM {
+.dropdownO {
   grid-column: 5;
 }
+
 /*MENU*/
 .menuB1,
 .menuB2,
@@ -93,15 +92,17 @@ h1 {
 .dropdownS,
 .dropdownB,
 .dropdownF,
+.dropdownO,
 .dropdownM {
-  display: inline-block;
+  display: block;
   height: var(--elHeight);
 }
 
 .dropdown-content {
   display: none;
-  min-width: 8rem;
   position: absolute;
+  margin: auto;
+  min-width: 8rem;
   font-size: 2em;
   z-index: 1;
 }
@@ -117,30 +118,63 @@ h1 {
 .dropdownS:hover .dropdown-content,
 .dropdownB:hover .dropdown-content,
 .dropdownF:hover .dropdown-content,
+.dropdownO:hover .dropdown-content,
 .dropdownM:hover .dropdown-content {
   display: block;
 }
 
-/*Image*/
-img {
-  height: 35vh;
-  border-radius: 1vh;
-  outline: 0.2rem solid var(--dark-colorPerm);
-  outline-offset: 0.3rem;
-}
 /*MAIN BODY*/
 .recipe {
   background-color: rgb(255, 255, 255, 0.6);
   padding: 2vh;
   margin: 0 2vh;
   border-radius: 2vh;
+  min-width: 30rem;
 }
-.tableContainerDiv {
-  vertical-align: top;
-  position: relative;
-  left: 20px;
+.rContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(10rem, 14rem) minmax(15rem, 1fr) 3fr;
+}
+/*Image*/
+
+img {
+  grid-column: 1;
+  width: 100%;
+  border-radius: 1vh;
+  outline: 0.2rem solid var(--dark-colorPerm);
+  outline-offset: 0.3rem;
+}
+.table {
+  margin-left: 1rem;
+  height: fit-content;
+  font-size: 1.25rem;
+}
+.tdA {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  color: var(--dark-colorPerm);
 }
 
+.method {
+  grid-column: 3/6;
+  margin: 0;
+  margin-left: 3rem;
+  font-size: 1.25rem;
+  height: fit-content;
+  padding: 1rem 0rem;
+  border-top: 0.2rem solid var(--dark-colorPerm);
+  border-bottom: 0.2rem solid var(--dark-colorPerm);
+  position: relative;
+}
+.method:before {
+  content: "Method: ";
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark-colorPerm);
+}
 /*FOOTER*/
 
 .author {
@@ -152,4 +186,27 @@ img {
   transition: all 0.5s;
   color: var(--dark-color);
   background-color: var(--light-color);
+  cursor: pointer;
+}
+.dropdown-content {
+  background-color: var(--dark-color);
+}
+.dropdownM > .dropdown-content {
+  padding: 0 0.5rem;
+}
+a {
+  user-select: none;
+  cursor: pointer;
+}
+.tDish {
+  height: 9vh;
+  width: 6vh;
+  outline: none;
+  margin: 0.3rem;
+  outline: 0.1rem solid white;
+  outline-offset: 0;
+  cursor: pointer;
+}
+.tDish:hover {
+  filter: brightness(0.9);
 }
