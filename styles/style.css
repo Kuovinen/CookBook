@@ -22,10 +22,11 @@ h1 {
 }
 .theme_btn {
   position: absolute;
-  top: 5vh;
-  right: 3vh;
-  width: 6vh;
-  height: 6vh;
+  top: 4vw;
+  right: 3vw;
+  width: 3rem;
+  height: 3rem;
+
   border: 0.1rem solid white;
   border-radius: 50%;
   background-color: var(--light-color);
@@ -49,6 +50,7 @@ h1 {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(5, minmax(8rem, 20%));
+  grid-template-rows: 5vh;
   align-items: center;
   justify-content: center;
 }
@@ -77,7 +79,7 @@ h1 {
   background-color: transparent;
   border: none;
   font-size: 2rem;
-  height: var(--elHeight);
+  height: 5vh;
 }
 
 .menuB1:hover,
@@ -100,7 +102,6 @@ h1 {
 .dropdown-content {
   display: none;
   position: absolute;
-  margin: auto;
   min-width: 8rem;
   font-size: 2em;
   z-index: 1;
@@ -112,7 +113,7 @@ h1 {
   display: block;
 }
 .dropdown-content a:hover {
-  background-color: var(--light-color);
+  filter: brightness(1.15);
 }
 .dropdownS:hover .dropdown-content,
 .dropdownB:hover .dropdown-content,
@@ -190,7 +191,7 @@ img {
 .dropdown-content {
   background-color: var(--dark-color);
 }
-.dropdownM > .dropdown-content {
+.menuB4 > .dropdown-content {
   padding: 0 0.5rem;
 }
 a {
