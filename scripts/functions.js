@@ -56,10 +56,12 @@ function createIngTable(dishName, list) {
 }
 //MAIN FUNCTION--------------------------------------------------------------------
 //populates the"recipe" div. Content from list object
-export default function createRecipe(recipe, dishName, list) {
+export default function createRecipe(dishName, list) {
   //if some recipe is already on page, first empty it out
-  if (recipe) {
-    document.getElementsByClassName("recipe")[0].innerHTML = "";
+  //if some recipe is already on page, first empty it out
+  let target = document.getElementsByClassName("recipe")[0];
+  if (target.innerHTML != "") {
+    target.innerHTML = "";
   }
   //prepare an array to hold all future DOM elements
   let elementArray = [];
@@ -85,13 +87,7 @@ export default function createRecipe(recipe, dishName, list) {
 
 //MENU FUNCTION--------------------------------------------------------------------
 
-export function makeMenuSection(
-  className,
-  buttonClass,
-  theme,
-  dishes,
-  recipeStatus
-) {
+export function makeMenuSection(className, buttonClass, theme, dishes) {
   //select the button container
   let node = document.querySelector("." + className);
   //make the button and add it's theme text
@@ -104,20 +100,21 @@ export function makeMenuSection(
     let a = createElement("a", key);
     a.textContent = dishes[key][0];
     a.onclick = function () {
-      recipeStatus = createRecipe(recipeStatus, key, dishes);
+      createRecipe(key, dishes);
     };
     node.childNodes[1].appendChild(a);
   });
 }
 //MISC MENU FUNCTION--------------------------------------------------------------------
 
-export function makeMISCSection(dishes, recipeStatus) {
+export function makeMISCSection(dishes) {
+  let node = document.querySelector(".dropdownM");
+  node.appendChild(createElement("button", "menuB4"));
+  node.childNodes[0].innerHTML = "MENU";
+  //select the button container
+  node = document.querySelector(".menuB4");
+  node.appendChild(createElement("div", "dropdown-content"));
   dishes.map((element) => {
-    //select the button container
-    let node = document.querySelector(".dropdownM");
-    node.appendChild(createElement("button", "menuB4"));
-    node.appendChild(createElement("div", "dropdown-content"));
-    node.childNodes[0].innerHTML = "MENU";
     //fill it with <a> elements that each have a class and text
     let keys = Object.keys(element);
     keys.map((key) => {
@@ -127,7 +124,7 @@ export function makeMISCSection(dishes, recipeStatus) {
       ilu.alt = "soybeancurdimage";
 
       ilu.onclick = function () {
-        recipeStatus = createRecipe(recipeStatus, key, element);
+        createRecipe(key, element);
       };
       node.childNodes[1].appendChild(ilu);
     });

@@ -7,15 +7,11 @@ import { makeMenuSection, makeMISCSection } from "./functions.js";
 //Assing a theme handler to theme button
 document.querySelector(".theme_btn").onclick = themeChange;
 
-//Recipe var prevents createRecipe() functions from adding more data without
-//deleting the old one
-var recipeStatus = false;
-
-makeMenuSection("dropdownS", "menuB1", "SOUPS", soups, recipeStatus);
-makeMenuSection("dropdownB", "menuB2", "BAKED", baked, recipeStatus);
-makeMenuSection("dropdownF", "menuB3", "FRIED", fried, recipeStatus);
-makeMenuSection("dropdownO", "menuB4", "OTHER", other, recipeStatus);
+makeMenuSection("dropdownS", "menuB1", "SOUPS", soups);
+makeMenuSection("dropdownB", "menuB2", "BAKED", baked);
+makeMenuSection("dropdownF", "menuB3", "FRIED", fried);
+makeMenuSection("dropdownO", "menuB4", "OTHER", other);
 
 let allDishes = [soups, fried, baked, other];
 
-makeMISCSection(allDishes, recipeStatus);
+makeMISCSection(allDishes);
