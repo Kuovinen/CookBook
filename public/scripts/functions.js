@@ -14,7 +14,7 @@ export function createElement(type, className) {
 }
 //create title for recipe div
 function setTitle(dishName, list) {
-  let recipeHeader = createDiv("recipeHeader", "block"); //div for recipe title
+  let recipeHeader = createDiv("recipeHeader", "flex"); //div for recipe title
   recipeHeader.style.fontSize = "2em";
   recipeHeader.innerHTML = "<b>" + list[dishName][0] + "</b>";
   return recipeHeader;
@@ -24,6 +24,7 @@ function setIllustration(dishName, list) {
   let illustration = document.createElement("img", "");
   illustration.src = list[dishName][3];
   illustration.alt = "RECIPE_ILLUSTRATION";
+  illustration.className = "recepiIllustration";
   return illustration;
 }
 //Cooking process text for recipe div
@@ -60,8 +61,10 @@ export default function createRecipe(dishName, list) {
   //if some recipe is already on page, first empty it out
   //if some recipe is already on page, first empty it out
   let target = document.getElementsByClassName("recipe")[0];
-  if (target.innerHTML != "") {
-    target.innerHTML = "";
+  target.innerHTML = "";
+  console.log(target.style);
+  if (target.style.margin == "") {
+    target.style.margin = "5%";
   }
   //prepare an array to hold all future DOM elements
   let elementArray = [];
@@ -109,10 +112,10 @@ export function makeMenuSection(className, buttonClass, theme, dishes) {
 
 export function makeMISCSection(dishes) {
   let node = document.querySelector(".dropdownM");
-  node.appendChild(createElement("button", "menuB4"));
-  node.childNodes[0].innerHTML = "MENU";
+  node.appendChild(createElement("button", "menuB5"));
+  node.childNodes[0].innerText = "Menu";
   //select the button container
-  node = document.querySelector(".menuB4");
+
   node.appendChild(createElement("div", "dropdown-content"));
   dishes.map((element) => {
     //fill it with <a> elements that each have a class and text
@@ -121,7 +124,7 @@ export function makeMISCSection(dishes) {
       let ilu = document.createElement("img", `tDish`);
       ilu.className = `tDish`;
       ilu.src = element[key][3];
-      ilu.alt = "soybeancurdimage";
+      ilu.alt = element[key][0] + " image";
 
       ilu.onclick = function () {
         createRecipe(key, element);
@@ -129,4 +132,20 @@ export function makeMISCSection(dishes) {
       node.childNodes[1].appendChild(ilu);
     });
   });
+}
+export function adjustMenu() {
+  let width = window.innerWidth;
+  if (width < 620) {
+    document.querySelector(".menuB1").innerText = "S";
+    document.querySelector(".menuB2").innerText = "B";
+    document.querySelector(".menuB3").innerText = "F";
+    document.querySelector(".menuB4").innerText = "O";
+    document.querySelector(".menuB5").innerText = "M";
+  } else {
+    document.querySelector(".menuB1").innerText = "Soups";
+    document.querySelector(".menuB2").innerText = "Baked";
+    document.querySelector(".menuB3").innerText = "Fried";
+    document.querySelector(".menuB4").innerText = "Other";
+    document.querySelector(".menuB5").innerText = "Menu";
+  }
 }
