@@ -16,17 +16,34 @@ body {
 }
 
 h1 {
-  text-align: center;
-  font-size: 3.5rem;
+  position: relative;
+  font-size: 4rem;
+  margin: 1rem auto;
   user-select: none;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  align-items: center;
+}
+.the {
+  font-size: 1rem;
+  max-height: 3rem;
+  margin-right: 0.5rem;
+}
+.potIcon {
+  height: 4rem;
+  max-height: 5rem;
+  margin-left: 1rem;
+  outline: none;
 }
 .theme_btn {
-  position: absolute;
-  top: 4vw;
-  right: 3vw;
-  width: 3rem;
-  height: 3rem;
-
+  position: relative;
+  margin: 0.15rem;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0.1rem solid white;
   border-radius: 50%;
   background-color: var(--light-color);
@@ -38,19 +55,23 @@ h1 {
 }
 
 .ribbon {
-  width: 100%;
+  width: 90%;
+  min-width: 15rem;
+  margin: 0 auto;
+  border-radius: 1.5rem;
   display: flex;
   justify-content: center;
-  height: 5vh;
+  height: 3rem;
   transition: all 0.5s;
   background-color: var(--dark-color);
 }
 .ribbon_content {
+  margin-left: 1rem;
   width: 90vw;
   height: 100%;
+  margin-left: 2rem;
   display: grid;
-  grid-template-columns: repeat(5, minmax(8rem, 20%));
-  grid-template-rows: 5vh;
+  grid-template-columns: repeat(5, minmax(3rem, 20%));
   align-items: center;
   justify-content: center;
 }
@@ -74,18 +95,21 @@ h1 {
 .menuB1,
 .menuB2,
 .menuB3,
-.menuB4 {
+.menuB4,
+.menuB5 {
   color: black;
   background-color: transparent;
   border: none;
   font-size: 2rem;
-  height: 5vh;
+  height: 100%;
+  width: 100%;
 }
 
 .menuB1:hover,
 .menuB2:hover,
 .menuB3:hover,
-.menuB4:hover {
+.menuB4:hover,
+.menuB5:hover {
   color: white;
   background-color: var(--light-colora);
   border: none;
@@ -97,56 +121,100 @@ h1 {
 .dropdownO,
 .dropdownM {
   display: block;
+  height: 100%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 8rem;
+  min-width: 3rem;
   font-size: 2em;
-  z-index: 1;
+  z-index: 3;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 .dropdown-content a {
   color: black;
   padding: 0.3rem;
   background-color: var(--dark-color);
+  border-radius: 0.5rem;
   display: block;
 }
 .dropdown-content a:hover {
   filter: brightness(1.15);
 }
+
 .dropdownS:hover .dropdown-content,
 .dropdownB:hover .dropdown-content,
 .dropdownF:hover .dropdown-content,
-.dropdownO:hover .dropdown-content,
-.dropdownM:hover .dropdown-content {
+.dropdownO:hover .dropdown-content {
   display: block;
 }
-
+.dropdownM:hover .dropdown-content {
+  display: flex;
+}
 /*MAIN BODY*/
 .recipe {
   background-color: rgb(255, 255, 255, 0.6);
   padding: 2vh;
   margin: 0 2vh;
   border-radius: 2vh;
-  min-width: 30rem;
+  width: fit-content;
+  margin: auto;
 }
 .rContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: minmax(10rem, 14rem) minmax(15rem, 1fr) 3fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.recipeHeader {
+  justify-content: center;
 }
 /*Image*/
 
-img {
+.recepiIllustration {
   grid-column: 1;
-  width: 100%;
   border-radius: 1vh;
   outline: 0.2rem solid var(--dark-colorPerm);
   outline-offset: 0.3rem;
+  min-width: 7rem;
+  max-width: 9rem;
+  max-height: 14rem;
 }
+.themeIcon {
+  border: none;
+  outline: none;
+  opacity: 0.7;
+  user-select: none;
+  height: 100%;
+}
+.intro {
+  margin: auto;
+  width: 50vw;
+  outline: 0.2rem solid var(--dark-colorPerm);
+  border-radius: 1rem;
+  padding: 1rem;
+  min-width: 15rem;
+}
+.introImg {
+  height: 6rem;
+  display: relative;
+  float: left;
+  display: inline;
+  border: none;
+  outline: none;
+  width: fit-content;
+  filter: invert(55%) sepia(19%) saturate(549%) hue-rotate(341deg)
+    brightness(93%) contrast(88%);
+}
+.introTxt {
+  font-size: 1.5rem;
+  margin: 0rem;
+}
+
 .table {
-  margin-left: 1rem;
   height: fit-content;
   font-size: 1.25rem;
 }
@@ -159,9 +227,10 @@ img {
 }
 
 .method {
-  grid-column: 3/6;
+  /*grid-column: 3/6;*/
+  flex: 7;
+  min-width: 15rem;
   margin: 0;
-  margin-left: 3rem;
   font-size: 1.25rem;
   height: fit-content;
   padding: 1rem 0rem;
@@ -191,21 +260,17 @@ img {
 .dropdown-content {
   background-color: var(--dark-color);
 }
-.menuB4 > .dropdown-content {
-  padding: 0 0.5rem;
-}
+
 a {
   user-select: none;
   cursor: pointer;
 }
 .tDish {
-  height: 9vh;
-  width: 6vh;
-  outline: none;
-  margin: 0.3rem;
-  outline: 0.1rem solid white;
-  outline-offset: 0;
+  width: 4rem;
+  border-radius: 0.5rem;
+  border: 0.2rem solid white;
   cursor: pointer;
+  margin: 0.25rem;
 }
 .tDish:hover {
   filter: brightness(0.9);
