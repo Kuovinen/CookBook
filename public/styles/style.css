@@ -153,6 +153,8 @@ h1 {
 }
 .dropdownM:hover .dropdown-content {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 20rem;
 }
 /*MAIN BODY*/
 .recipe {
