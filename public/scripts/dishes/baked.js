@@ -1,6 +1,6 @@
 const list = {
   applePie: [
-    "APPLE PIE",
+    "Apple pie",
     [
       [3, " ", "Apples", 0],
       [3, " ", "Eggs", 0],

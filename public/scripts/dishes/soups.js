@@ -1,6 +1,6 @@
 const list = {
   finnSoup: [
-    "FINNISH SOUP",
+    "Finnish soup",
     [
       [2, "cans", "Baked beans", 146],
       [450, "grams", "Ground beef", 1035],
@@ -11,7 +11,7 @@ const list = {
     "images/finSoup.jpg",
   ],
   peaSoup: [
-    "PEA SOUP",
+    "Pea soup",
     [
       [300, "grams", "dried peas", 0],
       [250, "grams", "potatoes", 0],

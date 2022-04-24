@@ -1,6 +1,6 @@
 const list = {
   stirFry: [
-    "STIR FRY",
+    "Stir fry",
     [
       [2, "pcs", "Bellpeppers", 0],
       [400, "grams", "Chicken Filtet", 0],
@@ -13,7 +13,7 @@ const list = {
     "images/stirfry.jpg",
   ],
   eggFryRice: [
-    "EGG FRIED RICE",
+    "Egg fried rice",
     [
       [250, "grams", "long grain rice", 0],
       [100, "grams", "ham", 0],

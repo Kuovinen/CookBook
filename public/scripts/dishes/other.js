@@ -1,6 +1,6 @@
 const list = {
   koreanAsparagus: [
-    "KOREAN ASPARAGUS",
+    "Korean asparagus",
     [
       [250, "grams", "soybean curd", 0],
       [70, "ml", "soy sauce", 0],
