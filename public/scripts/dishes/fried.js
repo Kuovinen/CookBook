@@ -9,7 +9,7 @@ const list = {
       [0.5, "glass", "Soy sauce", 0],
       [1, "tblsp", "Sesame oil", 0],
     ],
-    "Chop up everything and throw in pan. Fry up to the point it strats to burn.",
+    "Remove the seeds from the bell pepers, cut them into thin slices.Fry them in oil, adding cut or mashed garlic and both soy sauce and sesame oil. Remove them from the pan and use the remainin sauce to fry the cut chicken. Fry up to the point it strats to burn.",
     "images/stirfry.jpg",
   ],
   eggFryRice: [
