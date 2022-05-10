@@ -198,9 +198,5 @@ const list = {
     "Boil the soybean curd for about 10 minutes. Remove all the water from the boiled curd and put in a dish. Mix all the other ingridients and poar them onto the curd. Mix well.",
     "images/sbcurd.jpg",
   ],
-  a: a,
-  b: a,
-  c: a,
-  d: a,
 };
 export default list;
