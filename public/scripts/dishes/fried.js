@@ -12,19 +12,21 @@ const list = {
     "Remove the seeds from the bell pepers, cut them into thin slices.Fry them in oil, adding cut or mashed garlic and both soy sauce and sesame oil. Remove them from the pan and use the remainin sauce to fry the cut chicken. Fry up to the point it strats to burn.",
     "images/stirfry.jpg",
   ],
-  eggFryRice: [
-    "Egg fried rice",
+
+  risotto: [
+    "Bacon & Mushroom Risotto",
     [
-      [250, "grams", "long grain rice", 0],
-      [100, "grams", "ham", 0],
-      [3, "tblsp", "vegetable oil", 0],
-      [1, " ", "onion", 0],
-      [4, " ", "eggs", 0],
-      [2, " ", "spring onions", 0],
-      [2, "tblsp", "soy sauce", 0],
+      [3, "tblspn", "olive oil", 0],
+      [1, " ", "sliced onion", 0],
+      [5, "strips", "bacon", 0],
+      [225, "grams", "wild mushrooms", 0],
+      [300, "grams", "arborio rice", 0],
+      [120, "m.liters", "dry white wine", 0],
+      [1.2, "liters", "chicken broth", 0],
+      [55, "grams", "parmesan cheese", 0],
     ],
-    "Heat 2 tbsp of the oil in a large wok over a high heat, then add the onion and fry until lightly browned, around 5 mins. Add the rice and ham, stir and toast for about 3 mins, then move to the side of the pan.Add the remaining oil, then tip in the egg mixture. Leave to cook a little, then mix in with the rice – stir vigorously to coat the grains or, if you prefer the egg chunkier, allow to set for a little longer before breaking up and stirring through. Tip into a serving bowl and scatter over the spring onion to serve. You can also add sesame oil, ground white pepper and a splash of soy sauce to season.",
-    "images/EFRice.jpg",
+    "In a 5-quart Dutch oven, heat the olive oil over medium heat. Add the onion and cook 3-4 minutes until soft and slightly transparent. Add the bacon and stir constantly until it starts to crisp. Add the mushrooms and cook for an additional 2 minutes. Add the arborio rice and cook for one minute, stirring constantly so the oil coats the grains. Stir in the white wine and simmer 2-3 minutes, stirring occasionally. Add one cup 235ml of the chicken stock and simmer over medium heat for about 5 minutes, stirring occasionally. Once the rice absorbs most of the liquid, continue to add 235-470ml of stock at a time until the liquid is absorbed and the rice is cooked through, about 25-30 minutes total. NOTE: The risotto should be al dente and fall back in on itself when you run the spoon along the bottom of the pot. Stir in the Parmesan cheese and remove from the heat. Serve and garnish with extra Parmesan cheese.",
+    "images/risotto.jpg",
   ],
 };
 export default list;

@@ -111,7 +111,6 @@ h1 {
 .menuB4:hover,
 .menuB5:hover {
   color: white;
-  background-color: var(--light-colora);
   border: none;
   transition: all 0.3s;
 }
@@ -121,13 +120,14 @@ h1 {
 .dropdownO,
 .dropdownM {
   display: block;
+
   height: 100%;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 3rem;
+  min-width: 5rem;
   font-size: 2em;
   z-index: 3;
   border-top-right-radius: 0.5rem;
@@ -139,6 +139,7 @@ h1 {
   padding: 0.3rem;
   background-color: var(--dark-color);
   border-radius: 0.5rem;
+  min-width: 14rem;
   display: block;
 }
 .dropdown-content a:hover {
