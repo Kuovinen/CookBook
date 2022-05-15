@@ -1,0 +1,26 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "description": "cookbook typescript app",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanZujev/CookBook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanZujev/CookBook/issues"
+  },
+  "homepage": "https://github.com/RomanZujev/CookBook#readme",
+  "devDependencies": {
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
