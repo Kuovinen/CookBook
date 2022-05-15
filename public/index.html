@@ -13,10 +13,20 @@
       rel="stylesheet"
     />
     <style>
+      html {
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
       body {
         padding: 0;
         margin: 0;
         font-family: "Inconsolata", sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+      #app {
+        max-width: 1000px;
       }
       .ctg_but1,
       .ctg_but2,
@@ -34,42 +44,45 @@
     <script defer src="/__/firebase/init.js?useEmulator=false"></script>
   </head>
   <body class="main_body">
-    <div class="top_section">
-      <h1>
-        <span class="the">the</span>Cookbook<img
-          class="potIcon"
-          src="images/pot.svg"
-          alt="moon icon"
-        />
-      </h1>
-    </div>
-    <div class="ribbon">
-      <div class="ribbon_content">
-        <div class="dropdownM"></div>
-        <div class="dropdownS"></div>
-        <div class="dropdownB"></div>
-        <div class="dropdownF"></div>
-        <div class="dropdownO"></div>
+    <div id="app">
+      <div class="top_section">
+        <h1>
+          <span class="the">the</span>Cookbook<img
+            class="potIcon"
+            src="images/pot.svg"
+            alt="moon icon"
+          />
+        </h1>
       </div>
-      <button class="theme_btn">
-        <img class="themeIcon" src="images/moon.svg" alt="moon icon" />
-      </button>
-    </div>
+      <div class="ribbon">
+        <div class="ribbon_content">
+          <div class="dropdownM"></div>
+          <div class="dropdownS"></div>
+          <div class="dropdownB"></div>
+          <div class="dropdownF"></div>
+          <div class="dropdownO"></div>
+        </div>
+        <button class="theme_btn">
+          <img class="themeIcon" src="images/moon.svg" alt="moon icon" />
+        </button>
+      </div>
 
-    <br />
-    <br />
+      <br />
+      <br />
 
-    <div class="recipe">
-      <div class="intro">
-        <img class="introImg" src="images/cookbook.svg" alt="moon icon" />
+      <div class="recipe">
+        <div class="intro">
+          <img class="introImg" src="images/cookbook.svg" alt="moon icon" />
 
-        <p class="introTxt">
-          This project is meant as an example of web development work. I take no
-          responsibility for any potential food poisoning that might happen if
-          you follow any of the recepies listed on this site.
-        </p>
+          <p class="introTxt">
+            This project is meant as an example of web development work. I take
+            no responsibility for any potential food poisoning that might happen
+            if you follow any of the recepies listed on this site.
+          </p>
+        </div>
       </div>
     </div>
+
     <div class="author">last update 2022</div>
   </body>
 </html>
