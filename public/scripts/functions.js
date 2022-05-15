@@ -1,27 +1,27 @@
 //MINOR UTILITERY FUNCTIONS-----------------------------------------------------
 //div element function
 export function createDiv(className, display) {
-  let div = document.createElement("div");
+  const div = document.createElement("div");
   div.style.display = display;
   div.className = className;
   return div;
 }
 //multipurpose element function
 export function createElement(type, className) {
-  let element = document.createElement(type);
+  const element = document.createElement(type);
   element.className = className;
   return element;
 }
 //create title for recipe div
 function setTitle(dishName, list) {
-  let recipeHeader = createDiv("recipeHeader", "flex"); //div for recipe title
+  const recipeHeader = createDiv("recipeHeader", "flex"); //div for recipe title
   recipeHeader.style.fontSize = "2em";
   recipeHeader.innerHTML = "<b>" + list[dishName][0] + "</b>";
   return recipeHeader;
 }
 //create the dish illustration for recipe div
 function setIllustration(dishName, list) {
-  let illustration = document.createElement("img", "");
+  const illustration = document.createElement("img", "");
   illustration.src = list[dishName][3];
   illustration.alt = "RECIPE_ILLUSTRATION";
   illustration.className = "recepiIllustration";
@@ -30,16 +30,16 @@ function setIllustration(dishName, list) {
 //Cooking process text for recipe div
 function setMethod(dishName, list) {
   //Set up process text
-  let cookingMethod = createElement("p", "method");
+  const cookingMethod = createElement("p", "method");
   cookingMethod.textContent = list[dishName][2];
   return cookingMethod;
 }
 //Ingridients table for recipe div
 function createIngTable(dishName, list) {
-  let ingredients = createElement("table", "table");
+  const ingredients = createElement("table", "table");
 
   for (let i = 0; i < list[dishName][1].length; i++) {
-    let row = createElement("tr", "row");
+    const row = createElement("tr", "row");
     ingredients.appendChild(row);
     for (let j = 0; j < list[dishName][1][i].length - 1; j++) {
       //give amount cells it's own class for CSS
@@ -60,18 +60,18 @@ function createIngTable(dishName, list) {
 export default function createRecipe(dishName, list) {
   //if some recipe is already on page, first empty it out
   //if some recipe is already on page, first empty it out
-  let target = document.getElementsByClassName("recipe")[0];
+  const target = document.getElementsByClassName("recipe")[0];
   target.innerHTML = "";
   console.log(target.style);
   if (target.style.margin == "") {
     target.style.margin = "5%";
   }
   //prepare an array to hold all future DOM elements
-  let elementArray = [];
+  const elementArray = [];
   //fill the array wtih DOM elements
   elementArray.push(setTitle(dishName, list));
   elementArray.push(document.createElement("br"));
-  let container = createElement("div", "rContainer");
+  const container = createElement("div", "rContainer");
   container.appendChild(setIllustration(dishName, list));
   container.appendChild(createIngTable(dishName, list));
   container.appendChild(setMethod(dishName, list));
@@ -92,15 +92,15 @@ export default function createRecipe(dishName, list) {
 
 export function makeMenuSection(className, buttonClass, theme, dishes) {
   //select the button container
-  let node = document.querySelector("." + className);
+  const node = document.querySelector("." + className);
   //make the button and add it's theme text
   node.appendChild(createElement("button", buttonClass));
   node.appendChild(createElement("div", "dropdown-content"));
   node.childNodes[0].innerHTML = theme;
   //fill it with <a> elements that each have a class and text
-  let keys = Object.keys(dishes);
+  const keys = Object.keys(dishes);
   keys.map((key) => {
-    let a = createElement("a", key);
+    const a = createElement("a", key);
     a.textContent = dishes[key][0];
     a.onclick = function () {
       createRecipe(key, dishes);
@@ -111,7 +111,7 @@ export function makeMenuSection(className, buttonClass, theme, dishes) {
 //MISC MENU FUNCTION--------------------------------------------------------------------
 
 export function makeMISCSection(dishes) {
-  let node = document.querySelector(".dropdownM");
+  const node = document.querySelector(".dropdownM");
   node.appendChild(createElement("button", "menuB5"));
   node.childNodes[0].innerText = "Menu";
   //select the button container
@@ -119,9 +119,9 @@ export function makeMISCSection(dishes) {
   node.appendChild(createElement("div", "dropdown-content"));
   dishes.map((element) => {
     //fill it with <a> elements that each have a class and text
-    let keys = Object.keys(element);
+    const keys = Object.keys(element);
     keys.map((key) => {
-      let ilu = document.createElement("img", `tDish`);
+      const ilu = document.createElement("img", `tDish`);
       ilu.className = `tDish`;
       ilu.src = element[key][3];
       ilu.alt = element[key][0] + " image";
@@ -134,7 +134,7 @@ export function makeMISCSection(dishes) {
   });
 }
 export function adjustMenu() {
-  let width = window.innerWidth;
+  const width = window.innerWidth;
   if (width < 620) {
     document.querySelector(".menuB1").innerText = "S";
     document.querySelector(".menuB2").innerText = "B";

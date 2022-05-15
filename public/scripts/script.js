@@ -12,7 +12,7 @@ makeMenuSection("dropdownB", "menuB2", "Baked", baked);
 makeMenuSection("dropdownF", "menuB3", "Fried", fried);
 makeMenuSection("dropdownO", "menuB4", "Other", other);
 
-let allDishes = [soups, fried, baked, other];
+const allDishes = [soups, fried, baked, other];
 
 makeMISCSection(allDishes);
 window.addEventListener("resize", adjustMenu);
