@@ -106,6 +106,7 @@ export function makeMenuSection(
   node.appendChild(makeElement("button", buttonClass));
   node.appendChild(makeElement("div", "dropdown-content"));
   const child = node.childNodes[0] as HTMLElement;
+  console.log(theme);
   child.innerHTML = theme;
   //fill it with <a> elements that each have a class and text
   const keys = Object.keys(dishes);
@@ -115,7 +116,6 @@ export function makeMenuSection(
     a.onclick = function () {
       createRecipe(key, dishes);
     };
-    console.log(dishes);
     node.childNodes[1].appendChild(a);
   });
 }
@@ -151,10 +151,10 @@ export function makeMISCSection(dishes: IMiscDishes): void {
 export function adjustMenu(): void {
   const width = window.innerWidth;
   const menuB1 = document.querySelector(".menuB1") as HTMLElement;
-  const menuB2 = document.querySelector(".menuB1") as HTMLElement;
-  const menuB3 = document.querySelector(".menuB1") as HTMLElement;
-  const menuB4 = document.querySelector(".menuB1") as HTMLElement;
-  const menuB5 = document.querySelector(".menuB1") as HTMLElement;
+  const menuB2 = document.querySelector(".menuB2") as HTMLElement;
+  const menuB3 = document.querySelector(".menuB3") as HTMLElement;
+  const menuB4 = document.querySelector(".menuB4") as HTMLElement;
+  const menuB5 = document.querySelector(".menuB5") as HTMLElement;
   if (width < 620) {
     menuB1.innerText = "S";
     menuB2.innerText = "B";
