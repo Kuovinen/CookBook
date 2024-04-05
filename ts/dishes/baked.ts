@@ -77,5 +77,19 @@ const list = {
     "Preheat oven to 190°C. In a bowl, mix butter, garlic, lemon juice, salt, and pepper. Lay salmon fillets on a pan, and evenly distribute the marinade. Place broccoli on both sides of the salmon, and drizzle on olive oil, salt, pepper, and parmesan. Bake 18 minutes. Serve and garnish with parsley.",
     "images/salmon.jpeg",
   ],
+  pastaCarbonara: [
+    "Pasta Carbonara",
+    [
+      [200, "grams", "spaghetti", 0],
+      [100, "grams", "pancetta", 0],
+      [2, " ", "eggs", 0],
+      [50, "grams", "parmesan cheese", 0],
+      [2, "cloves", "garlic", 0],
+      [1, "teaspn", "black pepper", 0],
+      [1, "tblspn", "olive oil", 0],
+    ],
+    "Cook spaghetti according to package instructions. In a pan, heat olive oil and sauté minced garlic until fragrant. Add diced pancetta and cook until crispy. In a bowl, whisk eggs and grated parmesan. Remove the pan from heat, add drained spaghetti, and mix quickly with egg mixture to create a creamy sauce. Season with black pepper, garnish with extra parmesan, and serve immediately.",
+    "images/carbonara.jpeg",
+  ],
 };
 export default list;

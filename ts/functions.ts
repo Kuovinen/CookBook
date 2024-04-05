@@ -115,6 +115,7 @@ export function makeMenuSection(
     a.onclick = function () {
       createRecipe(key, dishes);
     };
+    console.log(dishes);
     node.childNodes[1].appendChild(a);
   });
 }
