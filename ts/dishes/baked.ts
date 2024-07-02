@@ -91,5 +91,20 @@ const list = {
     "Cook spaghetti according to package instructions. In a pan, heat olive oil and sauté minced garlic until fragrant. Add diced pancetta and cook until crispy. In a bowl, whisk eggs and grated parmesan. Remove the pan from heat, add drained spaghetti, and mix quickly with egg mixture to create a creamy sauce. Season with black pepper, garnish with extra parmesan, and serve immediately.",
     "images/carbonara.jpeg",
   ],
+  bananaBread: [
+    "Banana Bread",
+    [
+      [3, " ", "ripe bananas", 0],
+      [1, " ", "egg", 0],
+      [0.5, "cup", "melted butter", 0],
+      [1, "cup", "sugar", 0],
+      [1, "teaspn", "vanilla extract", 0],
+      [1, "teaspn", "baking soda", 0],
+      [1.5, "cups", "all-purpose flour", 0],
+      [0.5, "teaspn", "salt", 0],
+    ],
+    "Preheat oven to 175°C. Mash ripe bananas in a bowl, then mix in melted butter, egg, sugar, and vanilla extract until combined. Stir in baking soda, flour, and salt, mixing gently to avoid overworking the batter. Pour the mixture into a greased loaf pan and bake for 50-60 minutes, or until a toothpick inserted into the center comes out clean. Let cool before slicing. Enjoy warm or toasted with butter!",
+    "images/banana_bread.jpeg",
+  ],
 };
 export default list;
