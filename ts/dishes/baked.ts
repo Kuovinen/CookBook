@@ -106,5 +106,25 @@ const list = {
     "Preheat oven to 175°C. Mash ripe bananas in a bowl, then mix in melted butter, egg, sugar, and vanilla extract until combined. Stir in baking soda, flour, and salt, mixing gently to avoid overworking the batter. Pour the mixture into a greased loaf pan and bake for 50-60 minutes, or until a toothpick inserted into the center comes out clean. Let cool before slicing. Enjoy warm or toasted with butter!",
     "images/banana_bread.jpeg",
   ],
+  lasagna: [
+    "Classic Lasagna",
+    [
+      [12, " ", "lasagna noodles", 0],
+      [500, "grams", "ground beef", 0],
+      [1, "medium", "onion, chopped", 0],
+      [3, "cloves", "garlic, minced", 0],
+      [800, "grams", "tomato sauce", 0],
+      [2, "teaspn", "salt", 0],
+      [1, "teaspn", "black pepper", 0],
+      [1, "teaspn", "dried oregano", 0],
+      [1, "teaspn", "dried basil", 0],
+      [250, "grams", "ricotta cheese", 0],
+      [200, "grams", "mozzarella cheese, shredded", 0],
+      [50, "grams", "parmesan cheese", 0],
+      [1, " ", "egg", 0],
+    ],
+    "Preheat oven to 180°C. Cook lasagna noodles according to package instructions. In a pan, sauté chopped onion and minced garlic until softened, then add ground beef and cook until browned. Stir in tomato sauce, salt, pepper, oregano, and basil, simmering for 10 minutes. In a bowl, mix ricotta cheese, shredded mozzarella, parmesan, and egg. In a baking dish, layer noodles, meat sauce, and cheese mixture, repeating until finished. Top with extra mozzarella and parmesan. Bake for 40 minutes, let cool slightly, then serve.",
+    "images/lasagna.jpeg",
+  ],
 };
 export default list;
