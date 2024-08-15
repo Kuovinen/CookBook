@@ -126,5 +126,22 @@ const list = {
     "Preheat oven to 180°C. Cook lasagna noodles according to package instructions. In a pan, sauté chopped onion and minced garlic until softened, then add ground beef and cook until browned. Stir in tomato sauce, salt, pepper, oregano, and basil, simmering for 10 minutes. In a bowl, mix ricotta cheese, shredded mozzarella, parmesan, and egg. In a baking dish, layer noodles, meat sauce, and cheese mixture, repeating until finished. Top with extra mozzarella and parmesan. Bake for 40 minutes, let cool slightly, then serve.",
     "images/lasagna.jpeg",
   ],
+  stuffedPeppers: [
+    "Stuffed Bell Peppers",
+    [
+      [4, " ", "bell peppers", 0],
+      [250, "grams", "ground beef", 0],
+      [1, "cup", "cooked rice", 0],
+      [1, "medium", "onion, chopped", 0],
+      [2, "cloves", "garlic, minced", 0],
+      [400, "grams", "tomato sauce", 0],
+      [1, "teaspn", "salt", 0],
+      [0.5, "teaspn", "black pepper", 0],
+      [1, "teaspn", "dried oregano", 0],
+      [100, "grams", "shredded cheese", 0],
+    ],
+    "Preheat oven to 190°C. Cut the tops off bell peppers and remove seeds. In a pan, sauté chopped onion and garlic, then add ground beef and cook until browned. Stir in cooked rice, tomato sauce, salt, pepper, and oregano. Stuff the bell peppers with the mixture, place them in a baking dish, and cover with foil. Bake for 30 minutes. Remove foil, top with shredded cheese, and bake uncovered for another 10 minutes until the cheese melts. Let cool slightly and serve.",
+    "images/stuffed_peppers.jpeg",
+  ],
 };
 export default list;
