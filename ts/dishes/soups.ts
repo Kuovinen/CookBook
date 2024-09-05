@@ -26,7 +26,7 @@ const list = {
     ],
     "Heat olive oil in a pot over medium heat. Sauté the onion and garlic until softened. Add canned tomatoes and vegetable broth, then bring to a simmer. Cook for 20 minutes. Stir in heavy cream, salt, and pepper. Blend the soup until smooth using an immersion blender or regular blender. Add fresh basil, blend again briefly, and serve hot with a side of crusty bread.",
     "images/tomato_basil_soup.jpeg",
-  ],
+  ], //
   creamyMushroomSoup: [
     "Creamy Mushroom Soup",
     [
